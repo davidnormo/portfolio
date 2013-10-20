@@ -1,0 +1,123 @@
+body, html {
+	height: 100%;
+}
+
+body {
+	background: #fff;
+	color: #333;
+	font: 13px Helvetica, arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 50px;
+	margin: 40px 0 20px 0;
+}
+
+h2 {
+	font-size: 30px;
+	margin: 30px 0;
+}
+
+p {
+	color: #777;
+	line-height: 1.5em;
+	font-size: 18px;
+}
+
+div.container {
+	width: 80%;
+	margin: auto;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+}
+
+/*===== HEADER STYLES =====*/
+
+section#header {
+	width: 100%;
+	height: 50px;
+	background: #e9e9e9;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+section#header div.container {
+	padding: 13px 0;
+}
+
+section#header div.container > * {
+	height: 20px;
+}
+
+div#flagship {
+	display: inline-block;
+	width: 49.3%;
+	font-size: 20px;
+}
+
+a#mobile-menu {
+	display: none;
+}
+
+div#nav {
+	display: inline-block;
+	width: 49.3%;
+	text-align: right;
+	vertical-align: top;
+	padding: 4px 0;
+}
+
+div.nav-item {
+	display: inline-block;
+	margin: 0 10px;
+	font-weight: bold;
+}
+
+/*===== BODY STYLES =====*/
+ 
+section#body {
+	width: 100%;
+	background: #fff;
+}
+
+/*===== FOOTER STYLES =====*/
+
+#wrap {
+	min-height: 100%;
+	height: auto!important;
+	height: 100%;
+	margin-bottom: -50px;
+}
+
+.push {
+	height: 50px;
+}
+
+section#footer {
+	width: 100%;
+	height: 50px;
+	background: #333;
+	border-top: 1px solid #111;
+	color: #fff;
+	margin-top: 20px;
+}
+
+section#footer p {
+	color: #fff;
+	font-size: 13px;
+}
+
+section#footer div.container {
+	padding: 0px 0;
+}
