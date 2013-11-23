@@ -5,6 +5,12 @@
 	<meta name="viewport" content="width=device-width, user-scalable=false">
 	<link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 500px)" />
 	<link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 500px)" />
+	<? if(preg_match('#blog\.php#', $_SERVER['SCRIPT_FILENAME'])): ?>
+	<link rel="stylesheet" href="css/pojoaque.css" />
+	<script src="js/highlight-min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<? endif  ?>	
+
 	<script type="application/javascript" src="js/fastclick.min.js"></script>
 	<script type="text/javascript">
 		(function(){

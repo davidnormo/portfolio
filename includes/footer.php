@@ -4,7 +4,7 @@
 	</div>
 	<section id="footer">
 		<div class="container">
-			<p>&copy; 2013 davidnormo.com</p>
+			<p>&copy; <script>document.write(new Date().getFullYear());</script> davidnormington.com</p>
 		</div>
 	</section>
 </body>
