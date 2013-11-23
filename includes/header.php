@@ -52,11 +52,11 @@
 		<div class="container">
 			<div id="flagship">david normington</div>
 			<a href="#" id="mobile-menu">-</a>
-			<div id="nav">	
-				<div class="nav-item"><a href="blog.php">Blog</a></div>	
+			<!--<div id="nav">	
+				<div class="nav-item"><a href="#">Blog</a></div>	
 				<div class="nav-item"><a href="#">Works</a></div>	
 				<div class="nav-item"><a href="#">Contact</a></div>	
-			</div>
+			</div>-->
 		</div>
 	</section>
 	<section id="body">

@@ -13,4 +13,5 @@
 			<p>This is my portfolio and space to publish my work and keep things organised. 
 			My blog also lives here which I use to annotate some of my work but it's a lonely old thing,
 			without a lot of life but useful to me to jot down the odd thought or experiment.</p>
+			<p>You can contact me here: <a href="mailto:david.normo@gmail.com">david.normo@gmail.com</a></p>
 <? include 'includes/footer.php' ?>
