@@ -1,0 +1,99 @@
+@import 'norm';
+@import 'vars';
+
+body {
+	color: $base-color;
+	line-height: 1.6em;
+	font-family: $base-font-sans-serif;
+	font-size: 16px;
+}
+
+a:active, a:link, a:visited {
+	color: $primary-color;
+	text-decoration: none;
+}
+
+a:hover {
+	color: $base-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $base-font-serif;
+	line-height: 1em;
+}
+
+h1, h2, h3 {
+	color: $primary-color;
+}
+
+h4, h5, h6 {
+	color: $base-color;
+}
+
+h1 { font-size: 3em; }
+h2 { font-size: 2em; }
+h3 { font-size: 2em; }
+h4 { font-size: 1.8em; }
+
+h2 + h4 {
+	margin: -10px 0 0 0;
+}
+
+hr {
+	border: 0px;
+	width: 80%;
+	height: 2px;
+	background: #999;	
+	margin: 70px auto;
+}
+
+#container {
+	width: 80%;
+	margin: 0px auto;
+}
+
+#main {
+	padding: 50px 0 0 0;
+}
+
+p {
+	margin: 20px 0;
+}
+
+pre {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background: #f7f7f7;
+	font-size: 14px;
+}
+
+blockquote {
+	font-family: $base-font-serif;
+	border-left: 5px solid #999;
+	padding-left: 20px;
+}
+
+#footer-bg {
+	background: #fff;
+	padding: 10px 0;
+	height: 100px;
+	margin-top: 50px;
+
+	#footer {
+		font-family: Helvetica;
+	 	margin: 10px auto;
+   		width: 80%;		
+		font-size: 14px;
+		color: $primary-color;
+	}
+
+	#footer a {
+		color: $primary-color;
+	}
+}
+
+.text-right {
+	float: right;
+	text-align: right;
+}
