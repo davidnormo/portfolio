@@ -1,12 +1,14 @@
 @import 'norm';
 @import 'vars';
+@import 'mediaQueries';
 
 body {
+	@include set-font-size(16px, 16px, 16px, 18px);
 	color: $base-color;
-	line-height: 1.6em;
+	line-height: 1.7em;
 	font-family: $base-font-sans-serif;
-	font-size: 16px;
 }
+
 
 a:active, a:link, a:visited {
 	color: $primary-color;
@@ -22,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1em;
 }
 
-h1, h2, h3 {
+h1, h2 {
 	color: $primary-color;
 }
 
@@ -30,30 +32,47 @@ h4, h5, h6 {
 	color: $base-color;
 }
 
-h1 { font-size: 3em; }
-h2 { font-size: 2em; }
-h3 { font-size: 2em; }
+h1 {
+	 @include set-font-size(4em, 3.5em, 2.5em, 2em);
+}
+
+h2 { 
+	 @include set-font-size(3em, 2.5em, 1.9em, 1.8em);
+}
+
+h3 { font-size: 1.7em; }
 h4 { font-size: 1.8em; }
 
-h2 + h4 {
-	margin: -10px 0 0 0;
+//post date
+h2 + p {
+	@include desktop-and-up { margin: -40px 0 0 0!important; } 
+	@include tablet-landscape-only { margin: -33px 0 0 0 !important; }
+    @include tablet-portrait-and-below { margin: -25px 0 0 0!important; }
+	color: #aaa;
 }
 
 hr {
 	border: 0px;
-	width: 80%;
-	height: 2px;
-	background: #999;	
-	margin: 70px auto;
+	width: 50%;
+	height: 1px;
+	background: #ccc;	
+	@include tablet-landscape-and-up { margin: 70px auto; }
+	@include tablet-portrait-and-below { margin: 30px auto; }
+}
+
+#container, #footer {
+	@include desktop-and-up { width: 60%;  }
+	@include tablet-landscape-only { width: 80%; }
+	@include tablet-portrait-and-below { width: 95%; }
 }
 
 #container {
-	width: 80%;
-	margin: 0px auto;
-}
+	margin-left: auto;
+	margin-right: auto;
 
-#main {
-	padding: 50px 0 0 0;
+	@include desktop-and-up { margin-top: 50px; }
+	@include tablet-landscape-only { margin-top: 30px; }
+	@include tablet-portrait-and-below { margin-top: 20px; }
 }
 
 p {
@@ -61,17 +80,30 @@ p {
 }
 
 pre {
-	padding: 10px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	background: #f7f7f7;
-	font-size: 14px;
+	font-size: 14px;	
+	padding: 15px!important;
+}
+
+pre[class*="language-"] {
+ 	padding-left: 3.8em!important;
+	@include tablet-portrait-and-up { padding: 10px 10px 10px 3.8em!important; }
 }
 
 blockquote {
 	font-family: $base-font-serif;
 	border-left: 5px solid #999;
-	padding-left: 20px;
+	@include tablet-portrait-and-up { padding-left: 20px; }
+	@include mobile-only { 
+		 padding-left: 0px; 
+		 margin-left: 0px;
+	}
+}
+
+#intro {
+	margin-bottom: 20px;	
 }
 
 #footer-bg {
@@ -81,9 +113,8 @@ blockquote {
 	margin-top: 50px;
 
 	#footer {
-		font-family: Helvetica;
+		font-family: $base-font-sans-serif;
 	 	margin: 10px auto;
-   		width: 80%;		
 		font-size: 14px;
 		color: $primary-color;
 	}
@@ -97,3 +128,14 @@ blockquote {
 	float: right;
 	text-align: right;
 }
+
+:not(pre) > code {
+	border: 1px solid #ccc;
+	background: #F5F2F0;
+	border-radius: 5px;
+	padding: 3px;
+}	
+
+#container > ul {
+	@include mobile-only { padding-left: 20px; }
+} 

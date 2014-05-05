@@ -22,5 +22,4 @@
   </head>
   <body>
 	<div id="container">
-		<div id="main">
 		<h1>David Normington</h1>

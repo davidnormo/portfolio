@@ -1,5 +1,5 @@
 $base-color: #555;
-$primary-color: #92BBAC;
+$primary-color: #6EB198;
 
 
 /*
@@ -7,3 +7,14 @@ $primary-color: #92BBAC;
  */
 $base-font-sans-serif: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
 $base-font-serif: 'Domine', Georgia, 'Times', serif;
+
+/*
+ * Mixins
+ */
+
+@mixin set-font-size ($desktop, $t-land, $t-port, $mob){
+	 @include desktop-and-up { font-size: $desktop; }
+	 @include tablet-landscape-only {  font-size: $t-land; }
+	 @include tablet-portrait-only { font-size: $t-port; } 
+	 @include mobile-only { font-size: $mob; }	
+}

@@ -1,0 +1,23 @@
+#!/usr/bin/php
+<?php
+//check filename is set
+if(!isset($argv[1])){
+	throw new Exception('Missing argument 1: file name.');
+}
+
+//translate markdown into html
+$filename = $argv[1];
+$html = shell_exec('marked content/'.$filename);
+
+//safety check
+if(!$html){
+	throw new Exception('Couldn\'t parse markdown for file '.$filename);
+}
+
+//finalise the html
+$html = str_replace('<pre>', '<pre class="line-numbers">', $html);
+$html = str_replace("\n</code>", "</code>", $html);
+
+//add html to blog
+$filename = str_replace('.md', '.html', $filename);
+file_put_contents('www/posts/'.$filename, $html);

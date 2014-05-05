@@ -1,5 +1,4 @@
 	</div>
-	</div>
 	<div id="footer-bg">
 		<div id="footer">
 			<div class="text-right">
@@ -11,5 +10,6 @@
 		</div>
 	</div>
 	<script src="js/prism.js"></script>
+	<script src="//localhost:1337/livereload.js"></script>
   </body>
 </html>

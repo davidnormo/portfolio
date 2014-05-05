@@ -1,0 +1,71 @@
+<h2 id="command-line-cms">Command Line CMS</h2>
+<p>3 May 2014  </p>
+<p>In my previous post I talked about setting up this site. This post looks at how I&#39;ve extended it 
+since then, namely improvements to managing the content. The brief specification I wrote looked 
+like this:  </p>
+<blockquote>
+<ol>
+<li>Individual post pages</li>
+<li>Disqus commenting</li>
+<li>Post summaries on the index page</li>
+<li>Writing posts in Markdown</li>
+</ol>
+</blockquote>
+<p>The functionality I&#39;ve added addresses point 4 and puts the site in a good position to implement 
+points 1 and 3. There are a few constraints I am working with, I&#39;ll mention them here:</p>
+<ul>
+<li>I host this site for free with <a href="http://000webhost.com">000webhost.com</a>. The resources 
+however are largely enough for my needs.</li>
+<li>I don&#39;t have access to the command line on the server.</li>
+<li>I work on this site in my spare time between revising for 3rd year degree exams and being a husband and a wife. </li>
+</ul>
+<h3 id="assessing-the-situation">Assessing the situation</h3>
+<p>Obviously Wordpress jumps to mind. It&#39;s free, has a great number of plugins, has a good community 
+supporting it and regularly contributing, etc. However I didn&#39;t want to go back to theming again, 
+I just sorted that out. I didn&#39;t want to mess with syntax highlighting again or their 
+documentation for how to output a blog title or some other suck niggly problem. So a one of the 
+nice big blog softwares was probably out of the question. I wanted a simple, drop in package that 
+gave me the functionality I needed, or could be easily extended, without me having to learn their 
+API and go back trawling through the markup and CSS.</p>
+<p>After a bit of internal deliberation, I decided to put something together myself. Not trying to 
+reinvent the wheel but also not getting stuck with a blog software that was overpowered for my 
+needs and would cause more hassle in the long run if I wanted to extended it in the future.</p>
+<p>I was starting to get an idea of what I wanted or rather what I wanted to avoid:</p>
+<ul>
+<li>I didn&#39;t want to have to worry about security, users, logins etc. These would detract my attention from writing actual blog functionality and would slow the whole process up.</li>
+<li>I didn&#39;t want to put a huge amount of effort into the writing interface. I already had a nice work flow, writing in vim with access to the command line.</li>
+</ul>
+<h3 id="the-decision">The Decision</h3>
+<p>Therfore I decided to write a command line CMS. I could write the blog posts in one directory, the CMS could process these and output them to the <code>www/</code> dir. The system could operate on my local machine and then to publish the new posts I could simply FTP transfer the whole <code>www/</code> dir to the server.</p>
+<h3 id="implementation">Implementation</h3>
+<p>My final directory structure looks like this, printed using <a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?tree"><code>tree</code></a>:
+<span></p>
+<pre class="line-numbers"><code>.
+├── Gruntfile.js  
+├── cms  
+│   └── post  
+├── content  
+│   └── post3.md  
+├── sass  
+│   ├── _norm.scss  
+│   ├── _vars.scss  
+│   └── main.scss  
+└── www  
+    ├── css  
+    │   ├── highlight.css  
+    │   ├── main.css  
+    │   └── prism.css  
+    ├── img  
+    │   └── favicon.ico  
+    ├── includes  
+    │   ├── footer.php  
+    │   └── header.php  
+    ├── index.php  
+    ├── js  
+    │   ├── highlight.pack.js  
+    │   └── prism.js  
+    └── posts
+        ├── post1.php  
+        ├── post2.php  
+        └── post3.html</code></pre><p></span></p>
+
